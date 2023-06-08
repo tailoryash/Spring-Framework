@@ -1,0 +1,46 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!--    standalone list-->
+    <util:list list-class = "java.util.Vector"
+    id = "bestfrd">
+        <value>Yash</value>
+        <value>Arpit</value>
+        <value>Parth</value>
+
+    </util:list>
+
+<!--    standalone map-->
+<!--    <util:map map-class="java.util.HashMap" id = "fees">-->
+<!--        <entry key = "spring framework" value = "2000"/>-->
+<!--        <entry key = "Django" value = "1000"/>-->
+<!--        <entry key = "hibernate" value = "500" />-->
+<!--    </util:map>-->
+
+        <util:map map-class="java.util.TreeMap" id = "fees">
+            <entry key = "spring framework" value = "2000"/>
+            <entry key = "Django" value = "1000"/>
+            <entry key = "hibernate" value = "500" />
+        </util:map>
+
+<!--    standalone properties-->
+    <util:properties id = "dbconfig">
+        <prop key="driver">com.mysql.Driver</prop>
+        <prop key = "username"> yash tailor</prop>
+        <prop key="url">www.google.com</prop>
+    </util:properties>
+
+    <bean class="org.springcore.utilcollection.Person" name="person1">
+        <property name="friends" ref="bestfrd"/>
+        <property name="fees" ref="fees"/>
+        <property name="properties" ref = "dbconfig"/>
+    </bean>
+</beans>

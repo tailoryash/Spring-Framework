@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    metadata this is our bean-->
+    <bean class = "org.springcore.Student" name = "student1">
+        <property name = "studentId">
+            <value>2022</value>
+        </property>
+        <property name = "studentName">
+            <value>Yash Tailor</value>
+        </property>
+        <property name = "studentAddress">
+            <value>Ahmedabad</value>
+        </property>
+    </bean>
+</beans>
