@@ -11,4 +11,9 @@ public class HomeController {
         System.out.println("This is Home URL");
         return "helloworld";
     }
+
+//    @GetMapping("/")
+//    public String sayhello(){
+//        return "hello";
+//    }
 }
